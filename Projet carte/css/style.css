@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+/* TIMER */
+#times {
+    color: rgb(238, 10, 10);
+}
+button {
+    color: rgb(250, 6, 6);
+    background-color: #000;
+    font-size: 30px;
+    font-family: Impact, sans-serif; 
+    
+}
+p {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-family: Impact, sans-serif;
+}
+.gameInfos {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: Impact, sans-serif;
+}
+body {
+    height: 100vh;
+    /* display: flex; */
+    background-image: url(../img/images3.jpg);
+    width: 100%;
+}
+img {
+    width: 100px;
+}
+.game-scene {
+    margin: auto;
+    width: 640px;
+    height: 640px;
+    /* border: 2px solid darkred; */
+    display: flex;
+    flex-wrap: wrap;
+    /* perspective 3d */
+    perspective: 1000px;
+    
+}
+.game-card {
+    position: relative;
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    transform: scale(1);
+    transition: transform 0.3s;
+     /* border: 2px solid darkorange; */
+    transform-style: preserve-3d;
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* padding: 10px; */
+    /* background-color: darkslategray; */
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+.game-card:active {
+    transform: scale(0.95);
+    transition: transform .4s;
+}
+.game-card.flip {
+    transform: rotateY(180deg);
+}
+.front-face {
+    transform: rotateY(180deg);
+}
+/* // AJOUT STYLE HEADER  */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+#victory h2,
+#victory a {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -100;
+    color: rgba(251, 186, 5, 0);
+    font-family: Impact, sans-serif;
+    transition: color 0.4s 
+}
+#victory.display h2 {
+    z-index: 100;
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+    color: rgba(255, 255, 255, 1);
+    
+}
+#victory.display a {
+    z-index: 100;
+    display: flex;
+    top: 333px;
+    animation: overlay-text 500ms forwards;
+    color: rgba(255, 255, 255, 1);
+}
+@keyframes overlay-text {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 2em;
+    }
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.9);
+        font-size: 10em;
+}

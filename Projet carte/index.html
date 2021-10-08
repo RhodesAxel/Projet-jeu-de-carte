@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device_width, initiale-scale=1.0">
+    <title>Memory card la scene 1</title>
+</head>
+<body>
+    <!-- //ecran victoire -->
+    <div id="victory" class="victory-screen">
+        <h2>Gagné !</h2>
+        <a href="index.html" class="btn">rejouer ?</a>
+    </div>
+    <!-- ENTETE DU JEU -->
+    <header class="gameInfos">
+        <h1>Jeu des paires</h1>
+        <div class="game-info">
+            nombre de coup : <span id="flip-count">0</span>
+        </div>
+        <!-- NB DE PAIRES TROUVEES -->
+        <div class="fame-info">
+            Nombre de paire(s) trouvée(s) : <span id="victory-count">0</span>/6
+        </div>
+        <!-- timer  -->
+       
+            <p>Trop facile ? Lance le chrono et vois si tu peu finir avant ! </p>
+        <div id="times" class="display"></div>
+        <button onclick="start()">Lancer le décompte</button>
+    </header>
+<!--La SCENE DU JEUX -->
+    <section class="game-scene">
+        <!--    Carte 1 -->
+        <div class="game-card" data-cardname="umbrella1">
+            <img src="img/DragonRA.png" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div>
+        <!--    Carte 2 -->
+        <div class="game-card" data-cardname="umbrella1">
+            <img src="img/DragonRA.png" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 3 -->
+        <div class="game-card" data-cardname="umbrella2">
+            <img src="img/Obelisk.png" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 4 -->
+        <div class="game-card" data-cardname="umbrella2">
+            <img src="img/Obelisk.png" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 5 -->
+        <div class="game-card" data-cardname="umbrella3">
+            <img src="img/slifer.png" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 6 -->
+        <div class="game-card" data-cardname="umbrella3">
+            <img src="img/slifer.png" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 7 -->
+        <div class="game-card" data-cardname="umbrella4">
+            <img src="img/Gloire.jpg" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 8 -->
+        <div class="game-card"data-cardname="umbrella4">
+            <img src="img/Gloire.jpg" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 9 -->
+        <div class="game-card" data-cardname="umbrella5">
+            <img src="img/royaume-dueliste.png" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 10 -->
+        <div class="game-card" data-cardname="umbrella5">
+            <img src="img/royaume-dueliste.png" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 11 -->
+        <div class="game-card" data-cardname="umbrella6">
+            <img src="img/voyage-dans-le-royaume.jpg" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div><!--    Carte 12 -->
+        <div class="game-card" data-cardname="umbrella6">
+            <img src="img/voyage-dans-le-royaume.jpg" alt="legende de l'image" class="front-face">
+            <img src="img/front.jpg" alt="legende de l'image" class="back-face">
+        </div>
+    </section>
+<!--Chargement JS SCRIPT -->
+<script src="js/script.js"></script>
+</body>
+</html>
